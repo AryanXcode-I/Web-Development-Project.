@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists in HTML</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #5ab8ff, #0073ff);
+    padding: 40px;
+    color: #0e1a35;
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+.card{
+    background: #ffffffd2;
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-4px);
+}
+
+h2{
+    color: #00498b;
+    margin-bottom: 8px;
+}
+
+ol, ul, dl{
+    margin-left: 25px;
+    line-height: 1.6;
+}
+
+/* Beautify bullets */
+ul li::marker{
+    color: #005ce6;
+    font-size: 1.2rem;
+}
+
+/* Definition list styling */
+dt{
+    font-weight: bold;
+    color: #003e7b;
+    margin-top: 12px;
+}
+
+dd{
+    margin-left: 20px;
+    color: #1a335c;
+}
+
+/* Responsive */
+@media (max-width:600px){
+    body{
+        padding: 20px;
+    }
+    .card{
+        padding: 15px;
+    }
+}
+
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Lists In HTML</h1>
+
+        <!-- Ordered List -->
+        <section class="card">
+            <h2>Steps To Bake A Cake</h2>
+            <ol>
+                <li>Preheat the oven to 180°C (350°F).</li>
+                <li>Grease and flour a baking pan.</li>
+                <li>Mix dry ingredients together.</li>
+                <li>Cream sugar and butter.</li>
+                <li>Add eggs and vanilla.</li>
+                <li>Add milk and combine well.</li>
+                <li>Pour batter into pan.</li>
+                <li>Bake for 30–35 minutes.</li>
+                <li>Cool and serve.</li>
+            </ol>
+        </section>
+
+        <!-- Unordered List -->
+        <section class="card">
+            <h2>Grocery Items</h2>
+            <ul>
+                <li>Rice</li>
+                <li>Milk</li>
+                <li>Sugar</li>
+                <li>Bread</li>
+                <li>Eggs</li>
+                <li>Salt</li>
+                <li>Potatoes</li>
+                <li>Onions</li>
+                <li>Cooking Oil</li>
+                <li>Flour</li>
+            </ul>
+        </section>
+
+        <!-- Definition List -->
+        <section class="card">
+            <h2>Programming Languages</h2>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Used to structure content on web pages.</dd>
+
+                <dt>CSS</dt>
+                <dd>Used to design and style web pages.</dd>
+
+                <dt>JavaScript</dt>
+                <dd>Adds interaction to webpages.</dd>
+
+                <dt>Python</dt>
+                <dd>High-level language for automation, AI and data science.</dd>
+
+                <dt>C</dt>
+                <dd>Powerful system programming language.</dd>
+
+                <dt>C++</dt>
+                <dd>Extension of C with OOP features.</dd>
+            </dl>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

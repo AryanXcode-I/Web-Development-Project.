@@ -1,0 +1,93 @@
+<!DOCTYPE html> <!-- It tells browser that this document is an HTML5 file -->
+
+<html lang="en"> <!-- Overall webpage language set to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Supports all characters (emoji, symbols, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes website responsive on mobile -->
+    <title>HTML forms</title> <!-- Tab name -->
+</head>
+
+<body>
+    
+    <h1>Forms In HTML</h1> <!-- Main heading of the form -->
+
+    <!-- Form starts here and data will be sent to submit.php -->
+    <form action="/submit.php">
+
+        <div>
+            <label for="name">Name</label> <!-- Clickable label linked with input -->
+            <input type="text" id="name" placeholder="Enter Name" required> <!-- Text input, can't be empty -->
+        </div>
+        <br> <!-- Line space -->
+
+        <div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Enter Phone" required> <!-- tel format for phone numbers -->
+        </div>
+        <br>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter Email" required> <!-- Checks valid email -->
+        </div>
+        <br>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" required> <!-- Hides letters -->
+        </div>
+        <br>
+
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required> <!-- Date picker -->
+        </div>
+        <br>
+
+        <div>
+            <span>Gender:</span>
+            <!-- Radio buttons allow only ONE selection -->
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label> <!-- Clicking Male selects the circle -->
+
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label>
+        </div>
+        <br>
+
+        <div>
+            <span>Subscription Plan:</span>
+            <!-- All radios use SAME name 'plan' so only one can be selected -->
+            <input type="radio" id="gold" name="plan" value="gold" required>
+            <label for="gold">Gold</label>
+
+            <input type="radio" id="silver" name="plan" value="silver" required>
+            <label for="silver">Silver</label>
+
+            <input type="radio" id="bronze" name="plan" value="bronze" required>
+            <label for="bronze">Bronze</label>
+        </div>
+        <br>
+
+        <div>
+            <input type="checkbox" id="terms" required> <!-- Must check before submit -->
+            <label for="terms">I agree to the Terms and Conditions</label>
+        </div>
+        <br>
+
+        <div>
+            <label for="feedback">Feedback</label><br>
+            <textarea id="feedback" cols="30" rows="5" placeholder="Write your feedback here..."></textarea> <!-- Large text box -->
+        </div>
+        <br>
+
+        <!-- Button to submit the form -->
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>

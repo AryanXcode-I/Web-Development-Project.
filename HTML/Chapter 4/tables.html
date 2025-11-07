@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+    }
+
+    th {
+        background: #4CAF50;
+        color: white;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+        cursor: pointer;
+    }
+
+    caption {
+        caption-side: top;
+        font-size: 20px;
+        padding: 10px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+    <h1>Tables in html</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        
+        <!-- body of the table -->
+        <tbody>
+            <tr>
+                <td>Aryan</td>
+                <td>web developer</td>
+                <td>$99999</td>
+            </tr>
+            <tr>
+                <td>Sumit</td>
+                <td>App Development</td>
+                <td>$999</td>
+            </tr>
+            <tr>
+                <td>Rohit</td>
+                <td>Game Developer</td>
+                <td>$99</td>
+            </tr>
+            <tr>
+                <td>fuggi</td>
+                <td>Wella</td>
+                <td>$10000</td>
+            </tr>
+            <tr>
+                <td>Thanks For</td>
+                <td colspan="2">visiting</td>
+                <!-- in this the colspan use three coloum because we use colspan= 3 -->
+                 <!-- but in defaullt the colspan is 1 when we use <td></td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

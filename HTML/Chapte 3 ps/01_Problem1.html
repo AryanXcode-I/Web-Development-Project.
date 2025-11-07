@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy - Food deleviry On you door step</title>
+    <style>
+        /* styles.css */
+/* --------- Base + Theme --------- */
+:root{
+  --brand: #fc8019;   /* Swiggy orange */
+  --text: #222;
+  --muted: #666;
+  --bg: #fff;
+  --card: #fafafa;
+  --maxw: 1100px;
+}
+
+*{ box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* Make unknown <pr> act like a paragraph */
+pr{ display: block; }
+
+/* Utility container (using existing elements) */
+header, main, footer{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --------- Header --------- */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+header > div:first-child{
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.3px;
+}
+
+header > div:last-child{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+header a{
+  text-decoration: none;
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: transform .15s ease, background-color .15s ease, color .15s ease;
+  font-weight: 600;
+}
+
+header a:hover{
+  background: var(--card);
+  transform: translateY(-1px);
+}
+
+header a[href="/home"]{
+  background: var(--brand);
+  color: #fff;
+}
+header a[href="/home"]:hover{
+  filter: brightness(0.95);
+}
+
+/* --------- Main / Hero --------- */
+main{
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+main > div:first-of-type{
+  font-size: clamp(1.6rem, 2.6vw + 1rem, 3rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+  color: #111;
+  background: linear-gradient(90deg, #111 0%, var(--brand) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+pr{
+  max-width: 65ch;
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* Optional card feel for hero text without changing HTML */
+main{
+  background:
+    radial-gradient(1000px 300px at 10% -10%, rgba(252,128,25,0.08), transparent 60%),
+    radial-gradient(1000px 300px at 90% -20%, rgba(0,0,0,0.05), transparent 60%);
+  border-radius: 24px;
+}
+
+/* --------- Footer --------- */
+footer{
+  border-top: 1px solid #eee;
+  color: #555;
+  padding-top: 18px;
+  padding-bottom: 28px;
+  text-align: center;
+  font-size: .95rem;
+}
+
+footer::before{
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--brand);
+  border-radius: 999px;
+  margin: 0 auto 12px;
+}
+
+/* --------- Responsive --------- */
+@media (max-width: 720px){
+  header{
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  header > div:first-child{
+    font-size: 1.15rem;
+  }
+  header a{
+    padding: 7px 12px;
+    font-weight: 600;
+  }
+  pr{
+    font-size: 1rem;
+  }
+}
+
+/* --------- Nice focus states --------- */
+a:focus-visible{
+  outline: 2px dashed var(--brand);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            Zomato
+        </div>
+        <div>
+            <a href="/home">home</a>
+            <a href="/about">about</a>
+            <a href="/contact">contact</a>
+        </div>
+    </header>
+    <main>
+
+
+        <div>
+            order food anytime, anywhere
+        </div>
+        <pr>
+            With love and support from consumers, Swiggy expanded far and wide, first through the entire city of
+            Bengaluru and then across the entire country. Today, Swiggy is the leading food ordering and delivery
+            platform in India.
+
+        </pr>
+    </main>
+    <footer>
+        copyright swiggy All rights reserved
+    </footer>
+</body>
+
+</html>
